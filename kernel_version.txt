@@ -1,0 +1,2 @@
+6.12.55-1-lts
+model name	: AMD Ryzen 7 5700X 8-Core Processor

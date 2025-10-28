@@ -1,0 +1,121 @@
+Module                  Size  Used by
+snd_seq_dummy          12288  0
+snd_hrtimer            12288  1
+snd_seq               135168  7 snd_seq_dummy
+snd_seq_device         16384  1 snd_seq
+nft_fib_inet           12288  1
+nft_fib_ipv4           12288  1 nft_fib_inet
+nft_fib_ipv6           12288  1 nft_fib_inet
+nft_fib                12288  3 nft_fib_ipv6,nft_fib_ipv4,nft_fib_inet
+nft_reject_inet        12288  10
+nf_reject_ipv4         12288  1 nft_reject_inet
+nf_reject_ipv6         24576  1 nft_reject_inet
+nft_reject             12288  1 nft_reject_inet
+nft_ct                 28672  8
+nft_chain_nat          12288  3
+nf_nat                 61440  1 nft_chain_nat
+nf_conntrack          204800  2 nf_nat,nft_ct
+nf_defrag_ipv6         24576  1 nf_conntrack
+nf_defrag_ipv4         12288  1 nf_conntrack
+nf_tables             385024  256 nft_ct,nft_reject_inet,nft_fib_ipv6,nft_fib_ipv4,nft_chain_nat,nft_reject,nft_fib,nft_fib_inet
+vfat                   24576  1
+fat                   106496  1 vfat
+intel_rapl_msr         20480  0
+amd_atl                57344  1
+intel_rapl_common      53248  1 intel_rapl_msr
+snd_hda_codec_realtek   221184  1
+snd_hda_codec_generic   114688  1 snd_hda_codec_realtek
+snd_hda_scodec_component    20480  1 snd_hda_codec_realtek
+snd_hda_codec_hdmi     98304  1
+btusb                  81920  0
+snd_hda_intel          69632  2
+btrtl                  32768  1 btusb
+snd_intel_dspcfg       40960  1 snd_hda_intel
+btintel                69632  1 btusb
+eeepc_wmi              12288  0
+snd_intel_sdw_acpi     16384  1 snd_intel_dspcfg
+asus_wmi              110592  1 eeepc_wmi
+btbcm                  24576  1 btusb
+snd_hda_codec         217088  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+btmtk                  32768  1 btusb
+platform_profile       12288  1 asus_wmi
+snd_hda_core          143360  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+ee1004                 16384  0
+i8042                  57344  1 asus_wmi
+sparse_keymap          12288  1 asus_wmi
+snd_hwdep              20480  1 snd_hda_codec
+rapl                   20480  0
+r8169                 126976  0
+wmi_bmof               12288  0
+bluetooth            1101824  6 btrtl,btmtk,btintel,btbcm,btusb
+serio                  28672  1 i8042
+snd_pcm               204800  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+realtek                45056  1
+i2c_piix4              36864  0
+k10temp                16384  0
+mdio_devres            12288  1 r8169
+snd_timer              57344  3 snd_seq,snd_hrtimer,snd_pcm
+pcspkr                 12288  0
+snd                   155648  16 snd_hda_codec_generic,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm
+i2c_smbus              20480  1 i2c_piix4
+joydev                 28672  0
+mousedev               24576  0
+libphy                229376  3 r8169,mdio_devres,realtek
+soundcore              16384  1 snd
+gpio_amdpt             16384  0
+gpio_generic           24576  1 gpio_amdpt
+mac_hid                12288  0
+loop                   45056  0
+nfnetlink              20480  3 nf_tables
+ip_tables              36864  0
+x_tables               65536  1 ip_tables
+ext4                 1150976  1
+crc16                  12288  2 bluetooth,ext4
+mbcache                16384  1 ext4
+jbd2                  208896  1 ext4
+pkcs8_key_parser       12288  0
+nvidia_drm            143360  81
+nvidia_uvm           3870720  0
+nvidia_modeset       1929216  38 nvidia_drm
+hid_logitech_hidpp     77824  0
+nvidia              111505408  732 nvidia_uvm,nvidia_modeset
+hid_logitech_dj        45056  0
+hid_generic            12288  0
+crct10dif_pclmul       12288  1
+crc32_pclmul           12288  0
+polyval_clmulni        12288  0
+polyval_generic        12288  1 polyval_clmulni
+ghash_clmulni_intel    16384  0
+sha512_ssse3           53248  0
+sha256_ssse3           36864  0
+sha1_ssse3             32768  0
+aesni_intel           122880  0
+gf128mul               16384  2 polyval_generic,aesni_intel
+ccp                   184320  0
+crypto_simd            16384  1 aesni_intel
+cryptd                 28672  2 crypto_simd,ghash_clmulni_intel
+nvme                   65536  2
+usbhid                 86016  2 hid_logitech_dj,hid_logitech_hidpp
+drm_ttm_helper         16384  2 nvidia_drm
+nvme_core             258048  3 nvme
+ttm                   102400  1 drm_ttm_helper
+nvme_auth              24576  1 nvme_core
+video                  81920  2 asus_wmi,nvidia_modeset
+sp5100_tco             20480  0
+wmi                    28672  3 video,asus_wmi,wmi_bmof
+i2c_dev                28672  0
+crypto_user            20480  0
+btrfs                2174976  0
+blake2b_generic        20480  0
+libcrc32c              12288  4 nf_conntrack,nf_nat,btrfs,nf_tables
+crc32c_generic         12288  0
+crc32c_intel           16384  3
+xor                    20480  1 btrfs
+raid6_pq              122880  1 btrfs
+dm_mirror              28672  0
+dm_region_hash         24576  1 dm_mirror
+dm_log                 24576  2 dm_region_hash,dm_mirror
+dm_mod                229376  2 dm_log,dm_mirror
+88XXau               2314240  0
+cfg80211             1384448  1 88XXau
+rfkill                 40960  6 asus_wmi,bluetooth,cfg80211
