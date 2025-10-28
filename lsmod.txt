@@ -74,11 +74,11 @@ crc16                  12288  2 bluetooth,ext4
 mbcache                16384  1 ext4
 jbd2                  208896  1 ext4
 pkcs8_key_parser       12288  0
-nvidia_drm            143360  81
+nvidia_drm            143360  85
 nvidia_uvm           3870720  0
 nvidia_modeset       1929216  38 nvidia_drm
 hid_logitech_hidpp     77824  0
-nvidia              111505408  732 nvidia_uvm,nvidia_modeset
+nvidia              111505408  734 nvidia_uvm,nvidia_modeset
 hid_logitech_dj        45056  0
 hid_generic            12288  0
 crct10dif_pclmul       12288  1
